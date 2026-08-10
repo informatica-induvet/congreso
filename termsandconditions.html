@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  <title>Promociones Realva Induvet</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+
+
+<body>
+  <header>
+    <nav class="container">
+      <a href="https://www.induvet.com/">
+        <img src="img/logo.png" alt="logo">
+      </a>
+      <i class="fas fa-bars"></i>
+
+      <ul class="nav-links">
+        <li><a href="#start">Inicio</a></li>
+        <li><a href="#promos">Promociones</a></li>
+        <li><a href="#prizes">Premios</a></li>
+        <li><a href="#brands">Marcas</a></li>
+        <li><a href="#qregister">Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="termsand">
+    <h4 class="topterm">Artículo 1. Empresa patrocinadora del evento:</h4>
+    <p>Distribuidora Realva e Industria Veterinaria S. de R.L. de C.V. (INDUVET)</p>
+    <h4>Artículo 2: Nombre de la promoción:</h4>
+    <p>Gana con REAVA-INDUVET</p>
+    <h4>Artículo 3. Ámbito de Aplicación:</h4>
+    <p>Tegucigalpa M.D.C., Honduras</p>
+    <h4>Artículo 4. Requisitos para participar en la promoción:</h4>
+    <p>1- Podrán ser premiados únicamente los mayores de 18 años. En caso de ser menor de edad
+      y ser seleccionado como ganador, un representante legal mayor de edad deberá
+      acompañarle en la entrega de los premios. <br />
+      2- Cumplir todos los pasos que se publiquen en los anuncios del sorteo publicados</p>
+    <h4>Artículo 5. Mecánica de la promoción:</h4>
+    <p>Distribuidora Realva e INDUVET publica la dinámica del sorteo en sus redes sociales y pagina web
+      detallando las instrucciones y mecánica de participación para que los usuarios/participantes
+      comiencen a participar y puedan formar parte del sorteo de premios.
+      Los términos y condiciones del sorteo se publican en página web, redes sociales y la mecánica es
+      visible para todos los usuarios seguidores y no seguidores de Distribuidora Realva e INDUVET.
+      La dinámica de selección de los ganadores es al azar, utilizando herramientas de desarrollo
+      internacional donde no exista manipulación de códigos y se usara la pagina web:
+      www.sortea2.com</p>
+    <h4>Artículo 6. Fecha de inicio y finalización del sorteo</h4>
+    <p>1 de Mayo de 2023 al 31 de Mayo de 2023</p>
+    <h4>Artículo 7. Medio de difusión a través del cual se comunicara la adjudicación de los premios</h4>
+    <p>Redes sociales de Instagram y Facebook de Distribuidora Realva e INDUVET</p>
+    <h4>Artículo 8. Descripción de los premios</h4>
+    <p>Producto anti garrapatas marca Bravecto</p>
+    <h4>Artículo 9. Lugar y fecha de entrega de los premios</h4>
+    <p> Posterior al 7 de Junio de 2023 en el Boulevard Morazán, edificio Alvarenga, contiguo al paso desnivel
+      Lomas del Guijarro, Tegucigalpa M.D.C., Honduras </p>
+    <h4>Artículo 10. Plazo máximo para reclamar los premios</h4>
+    <p>1 mes a partir de la fecha en que se notificó al ganador la entrega del premio</p>
+    <h4>Artículo 11. Destino previsto para los premios no adjudicados</h4>
+    <p> Al no reclamar los premios en el plazo de un mes, los mismos serán donados a una fundación
+      elegida por la Junta Directiva </p>
+    <h4>Artículo 12. Reclamo de los premios:</h4>
+    <p>1. A través de las cuentas oficiales de Dsitribuidora Realva e INDUVET, en Facebook y/o
+      Instagram, se le notificara al ganador por mensaje directo, llamada telefónica, correo
+      electrónico <br />
+      2. Al momento de notificación como ganador se le pedirá los datos personales como: No. De
+      celular, copia de Identidad <br />
+      3. Para reclamar su premio el ganador debe presentarse a las instalaciones de Distribuidora
+      Realva ubicado en el Boulevard Morazán, edificio Alvarenga, Tegucigalpa M.D.C.,
+      Honduras</p>
+    <h4>Artículo 13. Condiciones y plazo del reclamo de premios:</h4>
+    <p>1. La entrega del premio será documentado mediante una carta de recibo conforme y una
+      fotografía del ganador recibiendo el premio correspondiente, esta última será a criterio
+      del ganador <br />
+      2. El premio únicamente se entregara de forma individual al ganador cuyos datos fueron
+      entregados al momento de notificar que fue ganador <br />
+      3. El ganador tiene un (1) mes para reclamar su premio, caso contrario este será donado a
+      una fundación elegida por la Junta Directiva <br />
+      4. El ganador tiene un plazo de 48 horas para contestar la aceptación del premio al momento
+      de ser notificado, en caso contrario, se elegirá un nuevo ganador que lo reemplace.</p>
+    <h4>Artículo 14. Suspensión involuntaria</h4>
+    <p>El Patrocinador suspenderá en forma inmediata la promoción, sin asumir ninguna responsabilidad,
+      si se llega a detectar fraudes tales como alteraciones, imitaciones, duplicaciones, sustituciones o
+      cualquier otra irregularidad. En el caso de que sobrevengan situaciones de fuerza mayor, que
+      resulten en perjuicio económico del Patrocinador, la promoción también podrá ser suspendida en
+      forma inmediata. Según la situación, esta suspensión será dada a conocer públicamente, pero si el
+      perjuicio económico es grave, la suspensión operará desde el mismo momento en que el
+      Patrocinador adopte la medida. El Patrocinador podrá evaluar si esta suspensión opera de forma
+      temporal o permanente, su responsabilidad será sólo la de comunicar a través de una publicación
+      en un medio de masivo de comunicación. Si este fuera el caso, los participantes no podrán
+      reclamar ningún tipo de daño o perjuicio.
+    </p>
+    <h4>Artículo 15. Premios no reclamados</h4>
+    <p>Los premios no reclamados serán donados a una fundación elegida por la Junta Directiva, de
+      manera interna.</p>
+    <h4>Artículo 16. Aceptación por parte de los participantes:</h4>
+    <p>1. Límite de responsabilidad: El participante<br />
+      2. Uso de imagen:El participante desde el momento que acepta la entrega del premio, deberá
+      aceptar la toma de fotografía de entrega del premio, para ser utilizada en las redes sociales
+      como evidencia del sorteo y entrega de premios, solamente si el ganador lo autoriza.<br />
+      3. Aviso de Privacidad:Todo participante, por el simple hecho de proporcionar sus datos
+      personales mediante cualquiera de las alternativas expuestas en el artículo 1, acepta el
+      siguiente aviso: Los datos personales que el interesado pueda proporcionar al Patrocinador
+      tendrán relación directa con su participación en el sorteo “Gana Con REALVA-INDUVET “. La
+      temporalidad del manejo de los datos personales será indefinida a partir de la fecha en que
+      haya proporcionado sus datos al Patrocinador. Una vez entregado al Patrocinador sus datos
+      personales, los mismos serán conservados en diferentes medios seguros que la tecnología
+      permita, cuyo acceso estará limitado solamente a las personas físicas y/o jurídicas con las que
+      el Patrocinador tenga alguna relación jurídica, en el entendido que dichos datos podrán ser
+      transferidos a terceros, a propósito de la ejecución del sorteo. El Patrocinador contará con las
+      medidas de seguridad que considere adecuadas para proteger el uso de los datos personales
+      por parte de terceros no autorizados. En caso de requerimiento de alguna autoridad, los datos
+      personales podrán ponerse a disposición de éstas, dentro del estricto cumplimiento a la Ley.
+    </p>
+    <h4>Artículo 17. Gastos que pudieren resultar al beneficiario de adjudicación de los premios</h4>
+    <p>Los gastos que se originen para el traslado de los premios y/o ganadores correrán por cuenta del
+      ganador únicamente.</p>
+    <h4>Artículo 18. Restricciones de participación en el sorteo</h4>
+    <p>No podrán participar los siguientes:
+      1. Menores de 18 años de edad, de resultar ganadores, deben ser acompañados por un
+      representante legal que asuma la responsabilidad del mismo. <br />
+      2. Propietarios de clínicas veterinarias<br />
+      3. Empresas o comerciantes individuales que sean clientes de Distrtibuidora Realva o Induvet
+      (clientes intermediarios para REALVA/INDUVET).
+    </p>
+    <h4>Artículo 19. Información:</h4>
+    <p>Para más información o consultas sobre esta promoción, debe llamar a +50494451637 o enviar email a
+      mercadeo@induvet.com</p>
+    <h4>Artículo 20. Ley Aplicable e Interpretación:</h4>
+    <p>Ninguna persona podrá interpretar o modificar el presente reglamento si no es con la autorización
+      previa y expresa por parte del Patrocinador, por lo que cualquier asunto que se presente con
+      respecto a la promoción y que no esté previsto en el presente reglamento, será resuelto
+      directamente por parte del Patrocinador, siempre y cuando no sea contrario a la Ley. Salvo en
+      aquellos casos en que deba de intervenir la autoridad</p>
+    <h4>Artículo 21. Inviolabilidad:</h4>
+    <p> Cualquier acción que lleven a cabo los participantes orientada a la violación de los procedimientos
+      o mecanismos establecidos para la realización de esta promoción, será causal inmediata de
+      exclusión de la misma y/o de la revocación de los premios. </p>
+    <h4>Artículo 22. Obligaciones de la Empresa:</h4>
+    <p> 1. Conservar por dos años la lista de ganadores de los premios, así como también el destino que
+      se le hubiere dado a los premios no adjudicados si los hubiere. <br />
+      2. No dará por finalizada la promoción antes de la fecha prevista de terminación sin haber
+      adjudicado la totalidad de los premios ofrecidos y haberles dado el destino previsto a los no
+      adjudicados.<br />
+      3. Publicitar las unidades disponibles del producto sometido a concurso, sorteo o promoción y
+      establecer la vigencia de la promoción, fecha o fechas de la promoción.<br /></p>
+    <p>El presente reglamento será exhibido en la página https://www.promosrealvainduvet.com/ en
+      forma destacada y fácilmente visible para el consumidor y ha sido redactado de acuerdo a los
+      lineamientos establecidos en la Ley y Reglamento de Protección al consumidor de Protección al
+      Consumidor.</p>
+
+    <a href="index2.html" class="btn-hover color-1">Regresar</a>
+  </section>
+
+  <section>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div>
+          <h6>Acerca de Nosotros</h6>
+          <p>Este sitio promocionesrealvainduvet.com Es una plataforma web creada para fines de ventas de las empresas
+            REALVA e INDUVET, la información de registro se maneja con total seguridad, Distribuidora Realva / Industria
+            Veterinaria S. de R.L. Boulevard Morazán, Tegucigalpa, Francisco Morazán, Honduras.</p>
+        </div>
+
+
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2025 Todos los derechos reservados.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="https://es-la.facebook.com/InduvetHonduras/" target="_blank"><i
+                  class="fab fa-facebook"></i></a></li>
+            <li><a class="twitter" href="https://mobile.twitter.com/realva_hn" target="_blank"><i
+                  class="fab fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="https://www.instagram.com/induvethn/?hl=es-la" target="_blank"><i
+                  class="fab fa-instagram"></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/company/induvethn/" target="_blank"><i
+                  class="fab fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
