@@ -274,7 +274,7 @@
 
                         <div class="form-group">
                             <label for="name" class="form-label">Empresa</label>
-                            <input type="text" name="empresa" id="empresa" class="form-control" placeholder="Empresa" required>
+                            <input type="text" name="empresa" id="empresa" class="form-control" placeholder="Empresa para la que laboras" required>
                         </div>                        
                     </div>
 
@@ -294,54 +294,25 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="phone" class="form-label">Número de Teléfono</label>
-                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="+504 1234-5678">
+                            <label for="ciudad" class="form-label">Ciudad</label>
+                            <input type="text" name="ciudad" id="ciudad" class="form-control" placeholder="Ciudad donde resides">
                         </div>
-
-                        <div class="form-group">
-                            <label for="email" class="form-label">Correo electrónico</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="tu@email.com">
-                        </div>                        
-                    </div>
-
-                    <div class="form-group">
-                        <label for="location" class="form-label">Sucursal o Establecimiento</label>
-                        <input type="text" name="location" id="location" class="form-control" placeholder="Ej. Super Mascota, REALVA, INDUVET">
-                    </div>
-
-                    <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
-                        <div style="flex: 2;">
-                            <label for="product" class="form-label">Producto</label>
-                            <select id="product" name="product" class="form-control" required>
-                                <option value="" disabled selected>Selecciona un producto</option>
-                                <option value="118.BOMBA DOSIFICADORA MIXTRON 250.P003 - 9009811">118.BOMBA DOSIFICADORA
-                                    MIXTRON 250.P003 - 9009811</option>
-                                <option value="BOMBA DOSIFICADORA MIXTRON 300.P150 - 9011810">BOMBA DOSIFICADORA MIXTRON
-                                    300.P150 - 9011810</option>
-                                <option value="BOMBA DOSIFICADORA MIXTRON 900.P022 - 9017510">BOMBA DOSIFICADORA MIXTRON
-                                    900.P022 - 9017510</option>
-                                <option value="STOP PAR">STOP PAR</option>
-                                <option value="KIT DE FILTROS PARA BOMBA DOSIFICADORA D12 5100214">KIT DE FILTROS PARA
-                                    BOMBA DOSIFICADORA D12 5100214</option>
-                            </select>
-                        </div>
-
-                        <div style="flex: 1;">
-                            <label for="quantity" class="form-label">Cantidad</label>
-                            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Ej. 1" min="1"
-                                required>
+                        <div class="form-group" style="display: flex; gap: 8px; align-items: center;">
+                            <div style="flex: 2;">
+                                <label for="product" class="form-label">¿Ya eres cliente?</label>
+                                <select id="product" name="product" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona un producto</option>
+                                    <option value="Si">Si</option>
+                                    <option value="No">No</option>
+                                    </select>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="file" class="form-label">Adjunta imagen de tu factura</label>
-                        <input type="file" id="file" class="form-control" required>
-                    </div>
-
+                    
                     <div class="form-group">
                         <label class="form-label">
                             <input type="checkbox" required> Al enviar el formulario acepta los términos y condiciones
-                            del sorteo.
+                            del evento
                         </label>
                     </div>
 
