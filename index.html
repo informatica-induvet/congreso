@@ -46,10 +46,11 @@
                 <!-- Enlaces del menú -->
                 <ul class="nav-links">
                     <li><a href="">Inicio</a></li>
-                    <li><a href="#promos">Promociones</a></li>
+                    <!--<li><a href="#promos">Promociones</a></li>-->
                     <!--<li><a href="#prizes">Premios</a></li>-->
-                    <li><a href="#brands">Marcas</a></li>
-                    <!-- <li><a href="#register">Registro</a></li>-->
+                    <li><a href="#brands">Aliados</a></li>
+                    <li><a href="#Asesores">Asesores</a></li>
+                    <li><a href="#register">Registro</a></li>
                 </ul>
             </nav>
         </div>
@@ -63,11 +64,11 @@
             <div class="hero-content fade-in">
                 <h1 class="hero-title"><span class="text-gradient">Soluciones Veterinarias </span> para cada especie 
                 </h1>
-                <p class="hero-subtitle">Somos proveedores de productos veterinarios de alta calidad, con marcas líderes y respaldo técnico para el bienestar animal y el éxito de tu producción.
-</p>
+                <p class="hero-subtitle">Somos proveedores de productos veterinarios de alta calidad, con marcas líderes y respaldo técnico para el 
+                    bienestar animal y el éxito de tu producción.</p>
                 <div class="hero-buttons">
                     <a href="#register" class="btn btn-primary">Registrarse</a>
-                    <a href="otherpromotions.html" class="btn btn-outline">Otras Promociones</a>
+                    <!--<a href="otherpromotions.html" class="btn btn-outline">Otras Promociones</a>-->
                 </div>
             </div>
         </div>
@@ -88,7 +89,7 @@
                     <p>Productos diseñados para el bienestar y máximo rendimiento del hato.</p>
                 </div>
                 <div class="right">
-                    <img src="img/promos.png" alt="">
+                    <img src="img/Aves.png" alt="">
                 </div>
 
                 <div class="feature-card fade-in">
@@ -99,7 +100,7 @@
                     <p>Prevención y tratamiento para una producción porcina más saludable y rentable.</p>
                 </div>
                 <div class="right">
-                    <img src="img/Terms.png" alt="">
+                    <img src="img/Bovinos.png" alt="">
                 </div>
 
                 <div class="feature-card fade-in">
@@ -110,7 +111,7 @@
                     <p>cuidado y desempeño óptimo para cada etapa del equipo..</p>
                 </div>
                 <div class="right">
-                    <img src="img/terms2.png" alt="">
+                    <img src="img/Porcinos.png" alt="">
                 </div>
             </div>
         </div>
@@ -257,13 +258,12 @@
         </div>
     </section>
 
-    <!-- Form Section 
+    <!-- Form Section -->
     <section id="register" class="form-section">
         <div class="container">
             <div class="form-container fade-in">
-                <h2 class="form-title">Llena el Formulario y Participa</h2>
-                <p class="text-center" style="margin-bottom: 30px;">Ingresa los datos que se te solicitan para
-                    participar en el sorteo</p>
+                <h2 class="form-title">Llena el Formulario </h2>
+                <p class="text-center" style="margin-bottom: 30px;">Ingresa los datos que se te solicitan para registrarte</p>
 
                 <form id="registration-form">
                     <div class="form-row">
@@ -273,9 +273,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="form-label">Correo electrónico</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="tu@email.com">
-                        </div>
+                            <label for="name" class="form-label">Empresa</label>
+                            <input type="text" name="empresa" id="empresa" class="form-control" placeholder="Empresa" required>
+                        </div>                        
                     </div>
 
                     <div class="form-row">
@@ -285,15 +285,28 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="invoice" class="form-label">Número de Factura</label>
-                            <input type="text" name="invoice" id="invoice" class="form-control" placeholder="Ej. 45000">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="tu@email.com">
+                        </div>                        
+                    </div>
+
+
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Número de Teléfono</label>
+                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="+504 1234-5678">
                         </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="tu@email.com">
+                        </div>                        
                     </div>
 
                     <div class="form-group">
                         <label for="location" class="form-label">Sucursal o Establecimiento</label>
-                        <input type="text" name="location" id="location" class="form-control"
-                            placeholder="Ej. Super Mascota, REALVA, INDUVET">
+                        <input type="text" name="location" id="location" class="form-control" placeholder="Ej. Super Mascota, REALVA, INDUVET">
                     </div>
 
                     <div class="form-group" style="display: flex; gap: 10px; align-items: center;">
@@ -339,7 +352,7 @@
             </div>
         </div>
     </section>
-    -->
+    
 
     <!-- Footer -->
     <footer class="footer">
