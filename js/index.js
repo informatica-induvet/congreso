@@ -1,39 +1,56 @@
-import { saveRegistro } from "./firebaseConfig.js";
+// js/index.js
 
-const registro = document.getElementById("registration-form");
+// URL de tu proyecto en Google Apps Script
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxtbQLM2Gj0UJqywv70WcI0cu7OMID6QXD63d5zCwob_ns7Os64HQi8STFkoR9RAFYw/exec";
 
-registro.addEventListener("submit", (e) => {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+    const registroForm = document.getElementById("registration-form");
+    const modal = document.getElementById("success-modal");
 
-    const name = document.getElementById("name").value.trim();
-    const empresa = document.getElementById("empresa").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const email = document.getElementById("email").value.trim();    
-    const ciudad = document.getElementById("ciudad").value.trim();
-    const cliente = document.getElementById("cliente").value.trim();
+    if (!registroForm) return;
 
-    console.log("Datos recibidos:", { name, empresa, phone, email, ciudad, cliente});
+    registroForm.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-    // Enviar el formulario con EmailJS
-    const serviceId = 'service_3vv7tpq';
-    const templateId = 'template_oj075tg';
+        // 1. Obtener valores del formulario
+        const formData = {
+            name: document.getElementById("name").value.trim(),
+            empresa: document.getElementById("empresa").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            ciudad: document.getElementById("ciudad").value.trim(),
+            cliente: document.getElementById("cliente").value.trim()
+        };
 
-    emailjs.sendForm(serviceId, templateId, registro)
+        // 2. Feedback visual en el botón
+        const submitBtn = registroForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerText;
+        submitBtn.innerText = "Guardando...";
+        submitBtn.disabled = true;
+
+        // 3. Enviar a Google Sheets
+        fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors", // Requerido para Google Apps Script
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
         .then(() => {
-            console.log('Correo enviado correctamente!', registro);
-            alert('¡Correo enviado correctamente! Ahora guardaremos tus datos.');
-
-            // Guardar los datos en Firebase solo si el correo se envió correctamente
-            saveRegistro(name, empresa, phone, email, ciudad, cliente);
-
-            // Limpiar el formulario
-            registro.reset();
+            // Éxito: Limpiar formulario y mostrar Modal
+            registroForm.reset();
+            if (modal) {
+                modal.classList.add("active");
+            }
         })
         .catch((error) => {
-            console.error('Error al enviar el correo:', error);
-            console.log('No se guardarán los datos en Firebase debido al error en el envío del correo.', registro);
-            alert('Hubo un error al enviar el correo. Por favor, inténtalo de nuevo.');
+            console.error("Error al guardar en Google Sheets:", error);
+            alert("Hubo un detalle al registrar los datos. Por favor intenta de nuevo.");
+        })
+        .finally(() => {
+            submitBtn.innerText = originalText;
+            submitBtn.disabled = false;
         });
-}); 
-
-console.log("El archivo index.js se cargó correctamente como módulo.");
+    });
+});
