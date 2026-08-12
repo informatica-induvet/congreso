@@ -42,24 +42,126 @@
             </nav>
         </div>
     </header>
-
-
     
     <section id="start" class="hero">
-    <div class="container">
-        <div class="hero-content fade-in">
-            <!-- Logo con la clase aplicada y extensión .png -->
-            <img src="img/Aliados/REALVA INDUVET.png" alt="Logo Realva Induvet" class="hero-logo">
-
-            <h1 class="hero-title"><span class="text-gradient">Soluciones Veterinarias</span> para cada especie</h1>
-            <p class="hero-subtitle">Somos proveedores de productos veterinarios de alta calidad...</p>
-            
-            <div class="hero-buttons">
-                <a href="#register" class="btn btn-primary">Registrarse</a>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <img src="img/Aliados/REALVA INDUVET.png" alt="Logo Realva Induvet" class="hero-logo">
+                <h1 class="hero-title"><span class="text-gradient">Soluciones Veterinarias</span> para cada especie</h1>
+                <p class="hero-subtitle">Somos proveedores de productos veterinarios de alta calidad...</p>
+                
+                <div class="hero-buttons">
+                    <a href="#register" class="btn btn-primary">Registrarse</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
+    <!-- Form Section -->
+    <section id="register" class="form-section">
+        <div class="container">
+            <div class="form-container fade-in">
+                <h2 class="form-title">Llena el Formulario </h2>
+                <p class="text-center" style="margin-bottom: 30px;">Ingresa los datos que se te solicitan para registrarte</p>
+
+                <form id="registration-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre y Apellido</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Tu nombre completo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empresa" class="form-label">Nombre de negocio</label>
+                            <input type="text" name="empresa" id="empresa" class="form-control" placeholder="Nombre de negocio" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Número de Teléfono</label>
+                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="+504 1234-5678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="tu@email.com">
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group" style="display: flex; gap: 8px; align-items: center;">
+                            <div style="flex: 2;">
+                                <label for="departamento" class="form-label">Departamento</label>
+                                <select id="departamento" name="departamento" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona un departamento</option>
+                                    <option value="Atlántida">Atlántida</option>
+                                    <option value="Choluteca">Choluteca</option>
+                                    <option value="Colón">Colón</option>
+                                    <option value="Comayagua">Comayagua</option>
+                                    <option value="Copán">Copán</option>
+                                    <option value="Cortés">Cortés</option>
+                                    <option value="El Paraíso">El Paraíso</option>
+                                    <option value="Francisco Morazán">Francisco Morazán</option>
+                                    <option value="Gracias a Dios">Gracias a Dios</option>
+                                    <option value="Intibucá">Intibucá</option>
+                                    <option value="Islas de la Bahía">Islas de la Bahía</option>
+                                    <option value="La Paz">La Paz</option>
+                                    <option value="Lempira">Lempira</option>
+                                    <option value="Ocotepeque">Ocotepeque</option>
+                                    <option value="Olancho">Olancho</option>
+                                    <option value="Santa Bárbara">Santa Bárbara</option>
+                                    <option value="Valle">Valle</option>
+                                    <option value="Valle ">Valle </option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad" class="form-label">Localidad</label>
+                            <input type="text" name="ciudad" id="ciudad" class="form-control" required placeholder="Ciudad">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" style="display: flex; gap: 8px; align-items: center;">
+                            <div style="flex: 2;">
+                                <label for="rubro" class="form-label">Rubro</label>
+                                <select id="rubro" name="rubro" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona un rubro</option>
+                                    <option value="Aves">Aves</option>
+                                    <option value="Cerdos">Cerdos</option>
+                                    <option value="Ganadería">Ganadería</option>
+                                    <option value="Acuacultura">Acuacultura</option>                                    
+                                    <option value="Otro">Otro</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group" style="display: flex; gap: 8px; align-items: center;">
+                            <div style="flex: 2;">
+                                <label for="cliente" class="form-label">¿Ya eres cliente?</label>
+                                <select id="cliente" name="cliente" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona un criterio</option>
+                                    <option value="Si">Si</option>
+                                    <option value="No">No</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">
+                            <input type="checkbox" required> Al enviar el formulario acepta los términos y condiciones del evento
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Registrarse</button>
+                </form>
+            
+
+            </div>
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section id="promos" class="section features">
@@ -172,8 +274,8 @@
     <section id="brands" class="section brands">
         <div class="container">
             <h2 class="section-title">Aliados estratégicos</h2>
-            <p>Trabajamos con laboratorios y marcas reconocidas a nivel mundial garantizando eficacia, seguridad y confianza en cada producto.
-.</p>
+            <p>Trabajamos con laboratorios y marcas reconocidas a nivel mundial garantizando eficacia, 
+                seguridad y confianza en cada producto.</p>
 
             <div class="brands-grid">
                 <div class="brand-item fade-in">
@@ -245,70 +347,7 @@
         </div>
     </section>
 
-    <!-- Form Section -->
-    <section id="register" class="form-section">
-        <div class="container">
-            <div class="form-container fade-in">
-                <h2 class="form-title">Llena el Formulario </h2>
-                <p class="text-center" style="margin-bottom: 30px;">Ingresa los datos que se te solicitan para registrarte</p>
-
-                <form id="registration-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Nombre y Apellido</label>
-                            <input type="text" name="name" id="name" class="form-control" placeholder="Tu nombre completo" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="empresa" class="form-label">Empresa</label>
-                            <input type="text" name="empresa" id="empresa" class="form-control" placeholder="Empresa para la que laboras" required>
-                        </div>                        
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Número de Teléfono</label>
-                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="+504 1234-5678">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email" class="form-label">Correo electrónico</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="tu@email.com">
-                        </div>                        
-                    </div>
-
-
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="ciudad" class="form-label">Ciudad</label>
-                            <input type="text" name="ciudad" id="ciudad" class="form-control" placeholder="Ciudad donde resides">
-                        </div>
-                        <div class="form-group" style="display: flex; gap: 8px; align-items: center;">
-                            <div style="flex: 2;">
-                                <label for="cliente" class="form-label">¿Ya eres cliente?</label>
-                                <select id="cliente" name="cliente" class="form-control" required>
-                                    <option value="" disabled selected>Selecciona un producto</option>
-                                    <option value="Si">Si</option>
-                                    <option value="No">No</option>
-                                    </select>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label">
-                            <input type="checkbox" required> Al enviar el formulario acepta los términos y condiciones del evento
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Registrarse</button>
-                </form>
-            
-
-            </div>
-        </div>
-    </section>
+    
     
 
     <!-- Footer -->
