@@ -232,19 +232,39 @@
         }
         
         .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas */
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card-info {
+    flex: 1;
+    padding-right: 15px;
+}
+
+.card-img img {
+    width: 90px; /* Ajusta el tamaño según tu preferencia */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Diseño responsivo para pantallas móviles */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr; /* Pasa a 1 columna en celulares */
+    }
+}
         
         .feature-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
         
         .feature-card:hover {
             transform: translateY(-10px);
