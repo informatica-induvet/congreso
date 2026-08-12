@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Evento para mostrar/ocultar "Otro Rubro"
     if (selectRubro && inputOtroRubro) {
         selectRubro.addEventListener("change", function () {
-            if (this.value === "Otro") {
+            if (this.value === "OtroRubro") {
                 inputOtroRubro.style.display = "block";
                 inputOtroRubro.setAttribute("required", "true");
             } else {
