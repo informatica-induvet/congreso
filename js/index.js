@@ -10,12 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectRubro = document.getElementById("rubro");
     const inputOtroRubro = document.getElementById("OtroRubro");
     const selectCliente = document.getElementById("cliente");
-    const inputAsesor = document.getElementById("Asesor"); // Asegúrate de tener id="asesor" en tu HTML
+    const inputAsesor = document.getElementById("Asesor");
 
     // Evento para mostrar/ocultar "Otro Rubro"
     if (selectRubro && inputOtroRubro) {
         selectRubro.addEventListener("change", function () {
-            if (this.value === "OtroRubro") {
+            // Evaluamos 'OtroRubro' o 'Otro' según como esté tu option
+            if (this.value === "OtroRubro" || this.value === "Otro") {
                 inputOtroRubro.style.display = "block";
                 inputOtroRubro.setAttribute("required", "true");
             } else {
@@ -60,7 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
             email: document.getElementById("email").value.trim(),
             departamento: document.getElementById("departamento").value.trim(),
             ciudad: document.getElementById("ciudad").value.trim(),
-            rubro: (rubroVal === "Otro") ? otroRubroVal : rubroVal,
+            // Acepta tanto "OtroRubro" como "Otro" para extraer el texto escrito
+            rubro: (rubroVal === "OtroRubro" || rubroVal === "Otro") ? otroRubroVal : rubroVal,
             cliente: clienteVal,
             asesor: (clienteVal === "Si") ? asesorVal : "N/A"
         };
