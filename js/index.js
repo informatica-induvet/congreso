@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
             empresa: document.getElementById("empresa").value.trim(),
             phone: document.getElementById("phone").value.trim(),
             email: document.getElementById("email").value.trim(),
+            departamento: document.getElementById("departamento").value.trim(),
             ciudad: document.getElementById("ciudad").value.trim(),
+            rubro: document.getElementById("rubro").value.trim(),
             cliente: document.getElementById("cliente").value.trim()
         };
 
