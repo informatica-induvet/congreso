@@ -1,6 +1,6 @@
 // js/index.js
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxtbQLM2Gj0UJqywv70WcI0cu7OMID6QXD63d5zCwob_ns7Os64HQi8STFkoR9RAFYw/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwmEGUMYGvbElDEFYQZnYZ5-zgbjmbebqmqhn96uIEZmwumzs-O_bHprShRe_hDi8S3/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
     const registroForm = document.getElementById("registration-form");
