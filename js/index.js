@@ -3,6 +3,33 @@
 // URL de tu proyecto en Google Apps Script
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxtbQLM2Gj0UJqywv70WcI0cu7OMID6QXD63d5zCwob_ns7Os64HQi8STFkoR9RAFYw/exec";
 
+const selectRubro = document.getElementById('rubro');
+const inputOtroRubro = document.getElementById('OtroRubro');
+const selectAsesor = document.getElementById('cliente');
+const inputAsesor = document.getElementById('OtroRubro');
+
+selectRubro.addEventListener('change', function() {
+    if (this.value === 'Otro') {
+        inputOtroRubro.style.display = 'block';
+        inputOtroRubro.setAttribute('required', 'true'); // Lo hace obligatorio solo si eligen "Otro"
+    } else {
+        inputOtroRubro.style.display = 'none';
+        inputOtroRubro.removeAttribute('required');
+        inputOtroRubro.value = ''; // Limpia el valor si cambian de opinión
+    }
+});
+
+selectAsesor.addEventListener('change', function() {
+    if (this.value === 'Si') {
+        inputAsesor.style.display = 'block';
+        inputAsesor.setAttribute('required', 'true'); // Lo hace obligatorio solo si eligen "Otro"
+    } else {
+        inputAsesor.style.display = 'none';
+        inputAsesor.removeAttribute('required');
+        inputAsesor.value = ''; // Limpia el valor si cambian de opinión
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const registroForm = document.getElementById("registration-form");
     const modal = document.getElementById("success-modal");
