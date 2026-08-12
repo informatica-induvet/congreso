@@ -14,18 +14,7 @@
     <title>Congreso</title>
     <link rel="icon" type="image/x-icon" href="https://via.placeholder.com/32/25aae1/ffffff?text=R+I">
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
-
-    </style>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-                </script>
-                <script type="text/javascript">
-                    (function () {
-                        emailjs.init({
-                            publicKey: "Hql3S1QQCudKkixZh",
-                        });
-                    })();
-                </script>
-
+</style>
 </head>
 
 <body>
@@ -425,11 +414,6 @@
             const modal = document.getElementById('success-modal');
             const closeModal = document.querySelector('.modal-close');
             const closeBtn = modal.querySelector('.btn');
-
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                modal.classList.add('active');
-            });
 
             closeModal.addEventListener('click', function () {
                 modal.classList.remove('active');
