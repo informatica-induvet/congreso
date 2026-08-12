@@ -218,6 +218,15 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+
+        .hero-logo {
+         max-width: 280px; /* Ajusta este tamaño según tu gusto */
+         height: auto;
+         margin-bottom: 20px;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         }
         
         /* Features */
         .features {
