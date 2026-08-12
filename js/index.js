@@ -6,14 +6,13 @@ registro.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
+    const empresa = document.getElementById("empresa").value.trim();
     const phone = document.getElementById("phone").value.trim();
-    const invoice = document.getElementById("invoice").value.trim();
-    const location = document.getElementById("location").value.trim();
-    const product = document.getElementById("product").value.trim();
-    const quantity = document.getElementById("quantity").value.trim();
+    const email = document.getElementById("email").value.trim();    
+    const ciudad = document.getElementById("ciudad").value.trim();
+    const cliente = document.getElementById("cliente").value.trim();
 
-    console.log("Datos recibidos:", { name, email, phone, invoice, location, product, quantity });
+    console.log("Datos recibidos:", { name, empresa, phone, email, ciudad, cliente});
 
     // Enviar el formulario con EmailJS
     const serviceId = 'service_3vv7tpq';
@@ -25,7 +24,7 @@ registro.addEventListener("submit", (e) => {
             alert('¡Correo enviado correctamente! Ahora guardaremos tus datos.');
 
             // Guardar los datos en Firebase solo si el correo se envió correctamente
-            saveRegistro(name, email, phone, invoice, location, product, quantity);
+            saveRegistro(name, empresa, phone, email, ciudad, cliente);
 
             // Limpiar el formulario
             registro.reset();
