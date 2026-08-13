@@ -583,6 +583,27 @@
         
        /* Responsivo: en pantallas pequeñas, ajustar la visualización */
 @media(max-width: 768px) {
+ .footer-grid {
+        display: flex;
+        flex-direction: column; /* Apila la marca y el contacto verticalmente */
+        gap: 30px; /* Espacio cómodo entre secciones */
+        text-align: center;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centra los iconos con el texto */
+        gap: 10px; /* Separación entre el icono y la dirección/correo */
+        margin-bottom: 10px;
+        word-break: break-word; /* Evita que correos largos se salgan de la pantalla */
+    }
   /* Mostrar ícono de menú */
   .menu-toggle {
     display: block;
