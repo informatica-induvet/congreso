@@ -383,7 +383,7 @@ header.scrolled {
 .footer {
     background: var(--dark);
     color: white;
-    padding: 50px 0 20px;
+    padding: 10px 0 10px;
 }
 
 .footer-grid {
@@ -397,7 +397,7 @@ header.scrolled {
     display: block;
     max-width: 220px;
     height: auto;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
 }
 
 .social-links {
